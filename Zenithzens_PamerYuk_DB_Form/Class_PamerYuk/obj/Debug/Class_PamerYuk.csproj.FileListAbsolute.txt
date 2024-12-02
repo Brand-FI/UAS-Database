@@ -1,0 +1,8 @@
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.AssemblyReference.cache
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.CoreCompileInputs.cache
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\bin\Debug\Class_PamerYuk.dll
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\bin\Debug\Class_PamerYuk.pdb
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\bin\Debug\MySql.Data.dll
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.CopyComplete
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.dll
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.pdb
