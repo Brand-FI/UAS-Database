@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenithzens_PamerYuk_DB", "Zenithzens_PamerYuk_DB\Zenithzens_PamerYuk_DB.csproj", "{E9E2090C-792E-4498-B43F-0CCDC6C78801}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenithzens_PamerYuk_DB_Form", "Zenithzens_PamerYuk_DB\Zenithzens_PamerYuk_DB_Form.csproj", "{E9E2090C-792E-4498-B43F-0CCDC6C78801}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class_PamerYuk", "Class_PamerYuk\Class_PamerYuk.csproj", "{CA0707B0-98C2-4621-8FAF-2FF0689CE0FE}"
 EndProject

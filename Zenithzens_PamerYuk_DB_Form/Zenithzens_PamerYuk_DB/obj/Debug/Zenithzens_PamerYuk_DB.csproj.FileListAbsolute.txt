@@ -1,0 +1,15 @@
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Zenithzens_PamerYuk_DB.exe.config
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Zenithzens_PamerYuk_DB.exe
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Zenithzens_PamerYuk_DB.pdb
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Class_PamerYuk.dll
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\MySql.Data.dll
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Class_PamerYuk.pdb
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.csproj.AssemblyReference.cache
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.FormLogin.resources
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.FormUtama.resources
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.Properties.Resources.resources
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.csproj.GenerateResource.cache
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.csproj.CoreCompileInputs.cache
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.csproj.CopyComplete
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.exe
+D:\UAS_Database\UAS-Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB.pdb

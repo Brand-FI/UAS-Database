@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Class_PamerYuk;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace Zenithzens_PamerYuk_DB
         public FormLogin()
         {
             InitializeComponent();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            FormUtama frm = (FormUtama)this.Owner;
+            string uid = textBoxUsername.Text;
+            string pwd = textBoxPassword.Text;
+            frm.userLogin = User.CekLogin(uid, pwd);
+            if (frm.userLogin is null)
+            {
+                MessageBox.Show("Username atau Password yang dimasukkan salah");
+                Application.Exit();
+            }
+            else
+            {
+                frm.Visible = true;
+                this.Close();
+            }
+        }
+
+        private void buttonKeluar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

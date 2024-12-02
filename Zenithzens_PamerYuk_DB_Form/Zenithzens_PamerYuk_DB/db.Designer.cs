@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Zenithzens_PamerYuk_DB {
+namespace Zenithzens_PamerYuk_DB_Form {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

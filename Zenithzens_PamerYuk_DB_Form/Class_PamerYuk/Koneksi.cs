@@ -19,7 +19,7 @@ namespace Class_PamerYuk
 
             ConfigurationSectionGroup userSettings = myConf.SectionGroups["userSettings"];
 
-            var settingsSection = userSettings.Sections["_160423186_POS_DB_Form.db"] as ClientSettingsSection;
+            var settingsSection = userSettings.Sections["Zenithzens_PamerYuk_DB.db"] as ClientSettingsSection;
 
             string DbServer = settingsSection.Settings.Get("DbServer").Value.ValueXml.InnerText;
             string DbName = settingsSection.Settings.Get("DbName").Value.ValueXml.InnerText;
