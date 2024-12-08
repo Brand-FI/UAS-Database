@@ -25,7 +25,10 @@ namespace Zenithzens_PamerYuk_DB
             frm.Owner = this;
             this.Visible = false;
             frm.ShowDialog();
-            Koneksi koneksi = new Koneksi();
+            if (userLogin is null)
+            {
+                Application.Exit();
+            }
         }
     }
 }

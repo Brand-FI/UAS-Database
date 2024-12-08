@@ -42,18 +42,38 @@ namespace Class_PamerYuk
             {
                 User user = new User();
                 user.Username = hasil.GetValue(0).ToString();
+                user.TglLahir = DateTime.Parse(hasil.GetValue(2).ToString());
+                user.NoKTP = hasil.GetValue(3).ToString();
+                user.Foto = hasil.GetValue(4).ToString();
 
-        
+                Kota k = new Kota();
+                k.Id = int.Parse(hasil.GetValue(5).ToString());
+                k.Nama = hasil.GetValue(6).ToString();
 
-
-
-
+                user.Kota = k;
                 return user;
             }
             else
             {
                 return null;
             }
+        }
+
+        public static bool TambahData(User u)
+        {
+            string perintah = "INSERT INTO user (username, password, tglLahir, noKTP, foto, Kota_id) " +
+                              "VALUES ('" + u.Username + "', '" + u.Password + "', '" +
+                              u.TglLahir.ToString("yyyy-MM-dd") + "', '" + u.NoKTP + "', '" +
+                              u.Foto + "', " + u.Kota.Id + ");";
+
+
+            int hasil = Koneksi.JalankanPerintahDML(perintah);
+            return hasil > 0;
+        }
+        public static void EkripsiPassword()
+        {
+            string perintah = "update user\r\nset user.password = SHA2(user.password, 512);";
+            Koneksi.JalankanPerintahDML(perintah);
         }
     }
 }

@@ -3,15 +3,22 @@
   <Class Name="Class_PamerYuk.User">
     <Position X="5.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAAAMA=</HashCode>
+      <HashCode>AAMAAAAAAAAAAACAgQIAAAMAAAACAAACAAQAQgAAAMA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Class_PamerYuk.Kota">
-    <Position X="7" Y="1.25" Width="1.5" />
+    <Position X="8.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAEAAAAQAAAAEAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAACAAAAAAAAAIAEAAAAQAAAAEAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Kota.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Class_PamerYuk.Konten">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABCAAAAAAAAAAAAAABAAAAAAAAAAAAACAAASEgAAkg=</HashCode>
+      <FileName>Konten.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

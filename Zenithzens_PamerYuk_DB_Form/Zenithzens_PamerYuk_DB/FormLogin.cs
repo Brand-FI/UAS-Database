@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Zenithzens_PamerYuk_DB_Form;
 
 namespace Zenithzens_PamerYuk_DB
 {
@@ -39,6 +40,21 @@ namespace Zenithzens_PamerYuk_DB
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Form f = Application.OpenForms["FormRegisterUser"];
+            if (f == null)
+            {
+                FormRegisterUser frm = new FormRegisterUser();
+                frm.Show();
+            }
+            else
+            {
+                f.BringToFront();
+                f.Show();
+            }
         }
     }
 }

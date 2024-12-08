@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,24 @@ namespace Class_PamerYuk
         public override string ToString()
         {
             return Nama;
+        }
+        public static List<Kota> BacaData()
+        {
+            string perintah;
+            perintah = "select * from Kota";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            List<Kota> ListKota = new List<Kota>();
+            while (hasil.Read() == true)
+            {
+
+                int tampungId = int.Parse(hasil.GetValue(0).ToString());
+                string tampungNama = hasil.GetValue(1).ToString();
+
+                Kota tampung = new Kota(tampungId, tampungNama);
+
+                ListKota.Add(tampung);
+            }
+            return ListKota;
         }
     }
 }
