@@ -8,17 +8,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Class_PamerYuk.Kota">
-    <Position X="8.75" Y="2" Width="1.5" />
+    <Position X="1.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAIAEAAAAQAAAAEAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Kota.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Class_PamerYuk.Konten">
-    <Position X="2.5" Y="2.25" Width="1.5" />
+    <Position X="7.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QABCAAAAAAAAAAAAAABAAAAAAAAAAAAACAAASEgAAkg=</HashCode>
       <FileName>Konten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Class_PamerYuk.Teman">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAABgAAAA=</HashCode>
+      <FileName>Teman.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
