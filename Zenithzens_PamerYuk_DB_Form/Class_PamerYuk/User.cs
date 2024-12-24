@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
+
 
 namespace Class_PamerYuk
 {
     public class User
     {
+        
         private string username;
         private string password;
         private DateTime tglLahir;
@@ -59,8 +63,9 @@ namespace Class_PamerYuk
             }
         }
 
-        public static bool TambahData(User u)
+        public static bool TambahData(User u, Image foto)
         {
+            u.Foto = User.SimpanGambar(u, foto);
             string perintah = "INSERT INTO user (username, password, tglLahir, noKTP, foto, Kota_id) " +
                               "VALUES ('" + u.Username + "', '" + u.Password + "', '" +
                               u.TglLahir.ToString("yyyy-MM-dd") + "', '" + u.NoKTP + "', '" +
@@ -74,6 +79,42 @@ namespace Class_PamerYuk
         {
             string perintah = "update user\r\nset user.password = SHA2(user.password, 512);";
             Koneksi.JalankanPerintahDML(perintah);
+        }
+        
+        public static string SimpanGambar(User u, Image image)
+        {
+            Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            ConfigurationSectionGroup userSettings = myConf.SectionGroups["userSettings"];
+
+            var settingsSection = userSettings.Sections["Zenithzens_PamerYuk_DB.db"] as ClientSettingsSection;
+            string path = settingsSection.Settings.Get("profile_picture").Value.ValueXml.InnerText;
+            if (image != null)
+            {
+                image.Save(path + "\\user_" + u.Username);
+                return "user_" + u.Username;
+
+            }
+            else
+            {
+                return "";
+            }
+        }
+        public static Image BacaGambar(string cover_image)
+        {
+            Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            ConfigurationSectionGroup userSettings = myConf.SectionGroups["userSettings"];
+
+            var settingsSection = userSettings.Sections["Zenithzens_PamerYuk_DB.db"] as ClientSettingsSection;
+            string path = settingsSection.Settings.Get("profile_picture").Value.ValueXml.InnerText;
+            try
+            {
+                Image foto = Image.FromFile(path + "\\" + cover_image);
+                return foto;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

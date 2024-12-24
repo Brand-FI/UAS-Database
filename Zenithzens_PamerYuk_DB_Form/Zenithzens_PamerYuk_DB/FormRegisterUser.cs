@@ -27,9 +27,8 @@ namespace Zenithzens_PamerYuk_DB_Form
                 u.Password = textBoxPassword.Text;
                 u.TglLahir = dateTimeTglLahir.Value;
                 u.NoKTP = textBoxNoKtp.Text;
-                u.Foto = textBoxFoto.Text;
                 u.Kota = (Kota)comboBoxKota.SelectedItem;
-                bool hasil = User.TambahData(u);
+                bool hasil = User.TambahData(u, pictureBox1.Image);
                 if (hasil == true)
                 {
                     User.EkripsiPassword();
@@ -56,6 +55,26 @@ namespace Zenithzens_PamerYuk_DB_Form
         private void buttonKeluar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void labelRegisterUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            openFileDialogProfile.ShowDialog(this);
+        }
+
+        private void openFileDialogProfile_FileOk(object sender, CancelEventArgs e)
+        {
+            pictureBox1.ImageLocation = openFileDialogProfile.FileName;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

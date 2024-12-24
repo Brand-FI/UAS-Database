@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Zenithzens_PamerYuk_DB" GeneratedClassName="db">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Zenithzens_PamerYuk_DB_Form" GeneratedClassName="db">
   <Profiles />
   <Settings>
     <Setting Name="DbServer" Type="System.String" Scope="User">
@@ -13,6 +13,9 @@
     </Setting>
     <Setting Name="DbPassword" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="profile_picture" Type="System.String" Scope="User">
+      <Value Profile="(Default)">E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\profile_picture</Value>
     </Setting>
   </Settings>
 </SettingsFile>

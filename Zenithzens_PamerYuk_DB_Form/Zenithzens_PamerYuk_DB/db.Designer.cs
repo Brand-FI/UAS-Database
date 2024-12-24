@@ -70,5 +70,17 @@ namespace Zenithzens_PamerYuk_DB_Form {
                 this["DbPassword"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("E:\\UAS_Database\\Zenithzens_PamerYuk_DB_Form\\profile_picture")]
+        public string profile_picture {
+            get {
+                return ((string)(this["profile_picture"]));
+            }
+            set {
+                this["profile_picture"] = value;
+            }
+        }
     }
 }

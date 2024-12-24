@@ -59,5 +59,15 @@ namespace Zenithzens_PamerYuk_DB_Form.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8abc6308b0fdc74c612b769383d2ad7e_t {
+            get {
+                object obj = ResourceManager.GetObject("8abc6308b0fdc74c612b769383d2ad7e_t", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

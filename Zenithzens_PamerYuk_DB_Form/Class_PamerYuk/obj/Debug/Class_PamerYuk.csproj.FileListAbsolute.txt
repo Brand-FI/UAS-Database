@@ -13,3 +13,10 @@ E:\kuliah_git\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\
 E:\kuliah_git\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.CopyComplete
 E:\kuliah_git\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.dll
 E:\kuliah_git\UAS-Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.pdb
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\bin\Debug\Class_PamerYuk.dll
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\bin\Debug\Class_PamerYuk.pdb
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.AssemblyReference.cache
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.CoreCompileInputs.cache
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.csproj.CopyComplete
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.dll
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Class_PamerYuk\obj\Debug\Class_PamerYuk.pdb

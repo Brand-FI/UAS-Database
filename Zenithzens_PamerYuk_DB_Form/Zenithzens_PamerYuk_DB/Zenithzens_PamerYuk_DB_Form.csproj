@@ -113,5 +113,8 @@
       <Name>Class_PamerYuk</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8abc6308b0fdc74c612b769383d2ad7e_t.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

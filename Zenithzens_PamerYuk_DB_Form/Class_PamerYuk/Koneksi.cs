@@ -26,6 +26,7 @@ namespace Class_PamerYuk
             string DbUsername = settingsSection.Settings.Get("DbUsername").Value.ValueXml.InnerText;
             string DbPassword = settingsSection.Settings.Get("DbPassword").Value.ValueXml.InnerText;
 
+
             string strCon = "server=" + DbServer + ";database=" + DbName + ";uid=" + DbUsername + ";password=" + DbPassword;
             KoneksiDB = new MySqlConnection();
 

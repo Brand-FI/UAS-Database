@@ -29,6 +29,16 @@ namespace Zenithzens_PamerYuk_DB
             {
                 Application.Exit();
             }
+            else
+            {
+                pictureBoxProfile.Image = User.BacaGambar(userLogin.Foto);
+                label1.Text = userLogin.Username;
+            }
+        }
+
+        private void pictureBoxProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
