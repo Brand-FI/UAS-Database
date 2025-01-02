@@ -48,12 +48,13 @@ namespace Zenithzens_PamerYuk_DB
             if (f == null)
             {
                 FormRegisterUser frm = new FormRegisterUser();
-                frm.Show();
+                frm.Owner = this;
+                frm.ShowDialog();
             }
             else
             {
                 f.BringToFront();
-                f.Show();
+                f.ShowDialog();
             }
         }
     }

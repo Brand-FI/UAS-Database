@@ -45,3 +45,6 @@ E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Cla
 E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\MySql.Data.dll
 E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\bin\Debug\Class_PamerYuk.pdb
 E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB_Form.csproj.CopyComplete
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB_Form.FormKisahHidup.resources
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB_Form.FormTambahKisahHidup.resources
+E:\UAS_Database\Zenithzens_PamerYuk_DB_Form\Zenithzens_PamerYuk_DB\obj\Debug\Zenithzens_PamerYuk_DB_Form.FormTambahOrganisasi.resources

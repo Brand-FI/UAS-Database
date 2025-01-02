@@ -10,7 +10,6 @@ namespace Class_PamerYuk
     {
         private int id;
         private string nama;
-
         public int Id { get => id; set => id = value; }
         public string Nama { get => nama; set => nama = value; }
 

@@ -51,6 +51,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormKisahHidup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKisahHidup.Designer.cs">
+      <DependentUpon>FormKisahHidup.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,18 @@
     <Compile Include="FormRegisterUser.Designer.cs">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTambahKisahHidup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahKisahHidup.Designer.cs">
+      <DependentUpon>FormTambahKisahHidup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahOrganisasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahOrganisasi.Designer.cs">
+      <DependentUpon>FormTambahOrganisasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +89,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormKisahHidup.resx">
+      <DependentUpon>FormKisahHidup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterUser.resx">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahKisahHidup.resx">
+      <DependentUpon>FormTambahKisahHidup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahOrganisasi.resx">
+      <DependentUpon>FormTambahOrganisasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>

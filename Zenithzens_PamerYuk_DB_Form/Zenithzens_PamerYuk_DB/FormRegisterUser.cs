@@ -34,6 +34,8 @@ namespace Zenithzens_PamerYuk_DB_Form
                     User.EkripsiPassword();
                     MessageBox.Show("Berhasil Mendaftarkan Akun");
                     this.Close();
+                    FormKisahHidup frm = new FormKisahHidup();
+                    frm.ShowDialog();
                 }
                 else
                 {

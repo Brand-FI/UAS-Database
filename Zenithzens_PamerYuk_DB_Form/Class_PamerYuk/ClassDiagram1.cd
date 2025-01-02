@@ -3,7 +3,7 @@
   <Class Name="Class_PamerYuk.User">
     <Position X="5.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAMAAAAAAAAAAACAgQIAAAMAAAACAAACAAQAQgAAAMA=</HashCode>
+      <HashCode>AAMAEAAAAAAAAACAgQIAAAcAAAACAAACAAQAQgAAAMA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -26,6 +26,20 @@
     <TypeIdentifier>
       <HashCode>EAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAACAAAABgAAAA=</HashCode>
       <FileName>Teman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Class_PamerYuk.KisahHidup">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgIAEAICAAAAAAAAAAIAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>KisahHidup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Class_PamerYuk.Organisasi">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAIAAEACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Organisasi.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

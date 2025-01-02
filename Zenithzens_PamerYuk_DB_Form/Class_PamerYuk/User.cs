@@ -18,6 +18,7 @@ namespace Class_PamerYuk
         private string noKTP;
         private string foto;
         private Kota kota;
+        private List<KisahHidup> listKisahHidup;
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
@@ -25,6 +26,7 @@ namespace Class_PamerYuk
         public string NoKTP { get => noKTP; set => noKTP = value; }
         public string Foto { get => foto; set => foto = value; }
         public Kota Kota { get => kota; set => kota = value; }
+        public List<KisahHidup> ListKisahHidup { get => listKisahHidup; set => listKisahHidup = value; }
 
         public User()
         {
@@ -34,6 +36,15 @@ namespace Class_PamerYuk
             NoKTP = "";
             Foto = "";
             Kota = new Kota();
+            ListKisahHidup = new List<KisahHidup>();
+        }
+        public void TambahKisahHidup(Organisasi or, string tglAwal, string tglAkhir)
+        {
+            KisahHidup kh = new KisahHidup();
+            kh.Organisasi = or;
+            kh.ThAwal = tglAwal;
+            kh.ThAkhir = tglAkhir;
+            ListKisahHidup.Add(kh);
         }
 
         public static User CekLogin(string uid, string pwd)

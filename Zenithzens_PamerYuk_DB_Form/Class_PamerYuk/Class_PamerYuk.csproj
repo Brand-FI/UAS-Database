@@ -47,9 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KisahHidup.cs" />
     <Compile Include="Koneksi.cs" />
     <Compile Include="Konten.cs" />
     <Compile Include="Kota.cs" />
+    <Compile Include="Organisasi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Teman.cs" />
     <Compile Include="User.cs" />
