@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.labelDaftar = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewKisah = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisah)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDaftar
@@ -48,13 +48,14 @@
             this.labelDaftar.Text = "KISAH HIDUP";
             this.labelDaftar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
+            // dataGridViewKisah
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 75);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(570, 274);
-            this.dataGridView2.TabIndex = 36;
+            this.dataGridViewKisah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewKisah.Location = new System.Drawing.Point(24, 75);
+            this.dataGridViewKisah.Name = "dataGridViewKisah";
+            this.dataGridViewKisah.Size = new System.Drawing.Size(570, 274);
+            this.dataGridViewKisah.TabIndex = 36;
+            this.dataGridViewKisah.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKisah_CellContentClick);
             // 
             // button1
             // 
@@ -74,6 +75,7 @@
             this.button2.TabIndex = 38;
             this.button2.Text = "SIMPAN";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // FormKisahHidup
             // 
@@ -82,11 +84,13 @@
             this.ClientSize = new System.Drawing.Size(623, 390);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridViewKisah);
             this.Controls.Add(this.labelDaftar);
             this.Name = "FormKisahHidup";
             this.Text = "FormKisahHidup";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Activated += new System.EventHandler(this.FormKisahHidup_Activated);
+            this.Load += new System.EventHandler(this.FormKisahHidup_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKisah)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,7 +98,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelDaftar;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewKisah;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

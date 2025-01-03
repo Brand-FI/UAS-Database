@@ -39,6 +39,7 @@ namespace Zenithzens_PamerYuk_DB_Form
                 bool hasil = Organisasi.TambahData(or);
                 if (hasil == true)
                 {
+                    this.Close();
                     MessageBox.Show("Berhasil tambah data");
                 }
                 else

@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 
 
@@ -38,12 +40,13 @@ namespace Class_PamerYuk
             Kota = new Kota();
             ListKisahHidup = new List<KisahHidup>();
         }
-        public void TambahKisahHidup(Organisasi or, string tglAwal, string tglAkhir)
+        public void TambahKisah(Organisasi or, string tglAwal, string tglAkhir, string deskripsi)
         {
             KisahHidup kh = new KisahHidup();
             kh.Organisasi = or;
             kh.ThAwal = tglAwal;
             kh.ThAkhir = tglAkhir;
+            kh.Deskripsi = deskripsi;
             ListKisahHidup.Add(kh);
         }
 
@@ -74,7 +77,53 @@ namespace Class_PamerYuk
             }
         }
 
-        public static bool TambahData(User u, Image foto)
+        public static User BacaData(string filter = "", string nilai = "") //Sementara
+        {
+            string perintah;
+            if (filter == "")
+            {
+                perintah = "select * from user";
+            }
+            else
+            {
+                perintah = "select * from user where " + filter + " like '%" + nilai + "%'";
+            }
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+            if (hasil.Read() == true)
+            {
+                User user = new User();
+                user.Username = hasil.GetValue(0).ToString();
+                user.TglLahir = DateTime.Parse(hasil.GetValue(2).ToString());
+                user.NoKTP = hasil.GetValue(3).ToString();
+                user.Foto = hasil.GetValue(4).ToString();
+
+                Kota k = new Kota();
+                k.Id = int.Parse(hasil.GetValue(5).ToString());
+                k.Nama = hasil.GetValue(6).ToString();
+
+                user.Kota = k;
+                return user;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public int CekNomor() //Untuk Tambahkan Kisah hidup
+        {
+            string cekNomor = "SELECT COUNT(*) FROM User;";
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(cekNomor);
+            if (hasil.Read() == true)
+            {
+                return int.Parse(hasil.GetValue(0).ToString());
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public static void TambahData(User u, Image foto)
         {
             u.Foto = User.SimpanGambar(u, foto);
             string perintah = "INSERT INTO user (username, password, tglLahir, noKTP, foto, Kota_id) " +
@@ -84,7 +133,44 @@ namespace Class_PamerYuk
 
 
             int hasil = Koneksi.JalankanPerintahDML(perintah);
-            return hasil > 0;
+            for (int i = 0; i < u.ListKisahHidup.Count; i++)
+            {
+                perintah = "INSERT INTO KisahHidup (Organisasi_id, username, thawal, thakhir, deskripsi) " +
+                                  "VALUES ('" + u.ListKisahHidup[i].Organisasi.Id + "', '" + u.Username + "', " +
+                                  u.ListKisahHidup[i].ThAwal + ", " + u.ListKisahHidup[i].ThAkhir + ", '" +
+                                  u.ListKisahHidup[i].Deskripsi + "');";
+
+                Koneksi.JalankanPerintahDML(perintah);
+            }
+        }
+        public static void TambahKisahHidup(User u, KisahHidup kh)
+        {
+            string perintah = "INSERT INTO KisahHidup (Organisasi_id, username, thawal, thakhir, deskripsi) " +
+                              "VALUES ('" + kh.Organisasi.Id + "', '" + u.Username + "', " +
+                              kh.ThAwal + ", " + kh.ThAkhir + ", '" +
+                              kh.Deskripsi + "');";
+
+            Koneksi.JalankanPerintahDML(perintah);
+        }
+        public static void BacaKisahHidup(User u)
+        {
+            u.ListKisahHidup.Clear();
+
+            string perintah;
+            perintah = "select * from kisahhidup where username='" + u.Username + "'";
+
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            while (hasil.Read() == true)
+            {
+                KisahHidup tampung = new KisahHidup();
+                tampung.Organisasi = Organisasi.BacaData("Id", hasil.GetValue(0).ToString())[0]; //Baca dari Username
+                tampung.ThAwal = hasil.GetValue(2).ToString();
+                tampung.ThAkhir = hasil.GetValue(3).ToString();
+                tampung.Deskripsi = hasil.GetValue(4).ToString();
+
+                u.ListKisahHidup.Add(tampung);
+            }
         }
         public static void EkripsiPassword()
         {

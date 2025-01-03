@@ -57,5 +57,10 @@ namespace Zenithzens_PamerYuk_DB
                 f.ShowDialog();
             }
         }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,19 +28,24 @@ namespace Zenithzens_PamerYuk_DB_Form
                 u.TglLahir = dateTimeTglLahir.Value;
                 u.NoKTP = textBoxNoKtp.Text;
                 u.Kota = (Kota)comboBoxKota.SelectedItem;
-                bool hasil = User.TambahData(u, pictureBox1.Image);
-                if (hasil == true)
+
+                foreach (DataGridViewRow row in dataGridViewKisah.Rows)
                 {
-                    User.EkripsiPassword();
-                    MessageBox.Show("Berhasil Mendaftarkan Akun");
-                    this.Close();
-                    FormKisahHidup frm = new FormKisahHidup();
-                    frm.ShowDialog();
+                    if (row.Cells["Organisasi_id"].Value != null)
+                    {
+                        Organisasi org = new Organisasi();
+                        org.Id = int.Parse(row.Cells["Organisasi_id"].Value.ToString());
+                        string thnAwal = row.Cells["thawal"].Value.ToString();
+                        string thnAkhir = row.Cells["thakhir"].Value.ToString();
+                        string deskripsi = row.Cells["deskripsi"].Value.ToString();
+                        u.TambahKisah(org, thnAwal, thnAkhir, deskripsi);
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Gagal Mendaftarkan Akun");
-                }
+                User.TambahData(u, pictureBox1.Image);
+
+                User.EkripsiPassword();
+                MessageBox.Show("Berhasil Mendaftarkan Akun");
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -52,6 +57,29 @@ namespace Zenithzens_PamerYuk_DB_Form
         {
             List<Kota> listKota = Kota.BacaData();
             comboBoxKota.DataSource = listKota;
+
+            if (dataGridViewKisah.ColumnCount == 0)
+            {
+                dataGridViewKisah.Columns.Add("Organisasi_id", "Id");
+                dataGridViewKisah.Columns.Add("Nama", "Nama");
+                dataGridViewKisah.Columns.Add("thawal", "Tahun Awal");
+                dataGridViewKisah.Columns.Add("thakhir", "Tahun Akhir");
+                dataGridViewKisah.Columns.Add("deskripsi", "Deskripsi");
+                dataGridViewKisah.AllowUserToAddRows = false;
+            }
+            if (dataGridViewKisah.ColumnCount == 5)
+            {
+                DataGridViewButtonColumn btnHapus = new DataGridViewButtonColumn();
+                btnHapus.Text = "Hapus";
+                btnHapus.HeaderText = "Hapus";
+                btnHapus.UseColumnTextForButtonValue = true;
+                btnHapus.Name = "buttonHapusGrid";
+                dataGridViewKisah.Columns.Add(btnHapus);
+            }
+        }
+        public void AddDataToGrid(int id, string nama, string thAwal, string thAkhir, string deskripsi)//Method Menambahkan Data ke Grid
+        {
+            dataGridViewKisah.Rows.Add(id, nama, thAwal, thAkhir, deskripsi);
         }
 
         private void buttonKeluar_Click(object sender, EventArgs e)
@@ -77,6 +105,33 @@ namespace Zenithzens_PamerYuk_DB_Form
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonTambah_Click(object sender, EventArgs e)
+        {
+            FormTambahKisahHidup frm = new FormTambahKisahHidup();
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void dataGridViewKisah_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = dataGridViewKisah.CurrentRow.Index;
+            if (e.ColumnIndex == dataGridViewKisah.Columns["buttonHapusGrid"].Index)
+            {
+                DialogResult dialogResult = MessageBox.Show("Apakah Anda yakin " +
+                "ingin menghapus data ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    dataGridViewKisah.Rows.RemoveAt(idx);
+                    MessageBox.Show("Data berhasil dihapus");
+                }
+                else
+                {
+                    MessageBox.Show("Data gagal dihapus");
+                }
+            }
         }
     }
 }

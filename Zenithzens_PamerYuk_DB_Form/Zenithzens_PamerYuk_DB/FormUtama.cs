@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Class_PamerYuk;
+using Zenithzens_PamerYuk_DB_Form;
 
 namespace Zenithzens_PamerYuk_DB
 {
@@ -39,6 +40,29 @@ namespace Zenithzens_PamerYuk_DB
         private void pictureBoxProfile_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void kisahHidupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = Application.OpenForms["FormKisahHidup"];
+
+            if (form == null)
+            {
+                FormKisahHidup frmKisahHidup = new FormKisahHidup();
+                frmKisahHidup.Owner = this;
+                frmKisahHidup.userLogin = userLogin;
+                frmKisahHidup.ShowDialog();
+            }
+            else
+            {
+                form.Show();
+                form.BringToFront();
+            }
         }
     }
 }
