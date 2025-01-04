@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using Microsoft.Win32;
@@ -50,6 +52,7 @@ namespace Class_PamerYuk
             ListKisahHidup.Add(kh);
         }
 
+
         public static User CekLogin(string uid, string pwd)
         {
             string perintah = "SELECT u.*, k.nama " + "FROM user u inner join kota k on u.Kota_id = k.id "
@@ -75,6 +78,48 @@ namespace Class_PamerYuk
             {
                 return null;
             }
+        }
+
+        public static List<User> BacaUserLain(User u, string filter = "", string nilai = "")
+        {
+            string perintah;
+            if (filter == "Organisasi")
+            {
+                perintah = "SELECT DISTINCT u.username " + // Biar tidak double
+                           "FROM User u " +
+                           "INNER JOIN KisahHidup kh ON u.username = kh.username " +
+                           "INNER JOIN Organisasi o ON kh.Organisasi_id = o.id " +
+                           "INNER JOIN KisahHidup kh2 ON kh2.Organisasi_id = kh.Organisasi_id " +
+                           "LEFT JOIN Teman t ON (u.Username = t.Username1 AND t.Username2 = '" + u.Username + "') " +
+                           "OR (u.Username = t.Username2 AND t.Username1 = '" + u.Username + "') " +
+                           "WHERE kh.username != '" + u.Username + "' " +
+                           "AND kh2.username = '" + u.Username + "' " +
+                           "AND t.Username1 IS NULL AND t.Username2 IS NULL " +
+                           "AND u.username LIKE '%" + nilai + "%';";
+            }
+            else
+            {
+                perintah = "SELECT u.Username " +
+                           "FROM User u " +
+                           "LEFT JOIN Teman t " +
+                           "ON (u.Username = t.Username1 AND t.Username2 = '" + u.Username + "') " +
+                           "OR (u.Username = t.Username2 AND t.Username1 = '" + u.Username + "') " +
+                           "WHERE t.Username1 IS NULL AND t.Username2 IS NULL " +
+                           "AND u.Username != '" + u.Username + "' " +
+                           "AND u.username LIKE '%" + nilai + "%';";
+            }
+            MySqlDataReader hasil = Koneksi.JalankanPerintahSelect(perintah);
+
+            List<User> ListUser = new List<User>();
+            while (hasil.Read() == true)
+            {
+                string tampungNama = hasil.GetValue(0).ToString();
+                User user = new User();
+                user.Username = tampungNama;
+
+                ListUser.Add(user);
+            }
+            return ListUser;
         }
 
         public static User BacaData(string filter = "", string nilai = "") //Sementara
@@ -126,13 +171,12 @@ namespace Class_PamerYuk
         public static void TambahData(User u, Image foto)
         {
             u.Foto = User.SimpanGambar(u, foto);
+
             string perintah = "INSERT INTO user (username, password, tglLahir, noKTP, foto, Kota_id) " +
-                              "VALUES ('" + u.Username + "', '" + u.Password + "', '" +
+                              "VALUES ('" + u.Username + "', SHA2('" + u.Password + "', 512), '" +
                               u.TglLahir.ToString("yyyy-MM-dd") + "', '" + u.NoKTP + "', '" +
                               u.Foto + "', " + u.Kota.Id + ");";
-
-
-            int hasil = Koneksi.JalankanPerintahDML(perintah);
+            Koneksi.JalankanPerintahDML(perintah);
             for (int i = 0; i < u.ListKisahHidup.Count; i++)
             {
                 perintah = "INSERT INTO KisahHidup (Organisasi_id, username, thawal, thakhir, deskripsi) " +
@@ -172,12 +216,6 @@ namespace Class_PamerYuk
                 u.ListKisahHidup.Add(tampung);
             }
         }
-        public static void EkripsiPassword()
-        {
-            string perintah = "update user\r\nset user.password = SHA2(user.password, 512);";
-            Koneksi.JalankanPerintahDML(perintah);
-        }
-        
         public static string SimpanGambar(User u, Image image)
         {
             Configuration myConf = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);

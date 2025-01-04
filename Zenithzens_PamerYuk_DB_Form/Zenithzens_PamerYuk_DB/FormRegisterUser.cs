@@ -42,8 +42,6 @@ namespace Zenithzens_PamerYuk_DB_Form
                     }
                 }
                 User.TambahData(u, pictureBox1.Image);
-
-                User.EkripsiPassword();
                 MessageBox.Show("Berhasil Mendaftarkan Akun");
                 this.Close();
             }

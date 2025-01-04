@@ -28,26 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kisahHidupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.friendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.cariToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.permintaanPertemananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.daftarTemanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxProfile = new System.Windows.Forms.PictureBox();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.Location = new System.Drawing.Point(512, 0);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(29, 24);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxProfile.TabIndex = 0;
-            this.pictureBoxProfile.TabStop = false;
-            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
             // 
             // label1
             // 
@@ -62,7 +56,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
-            this.friendToolStripMenuItem});
+            this.friendToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(600, 24);
@@ -94,9 +89,51 @@
             // 
             // friendToolStripMenuItem
             // 
+            this.friendToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cariToolStripMenuItem,
+            this.permintaanPertemananToolStripMenuItem,
+            this.daftarTemanToolStripMenuItem});
             this.friendToolStripMenuItem.Name = "friendToolStripMenuItem";
-            this.friendToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.friendToolStripMenuItem.Text = "Friend";
+            this.friendToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.friendToolStripMenuItem.Text = " Teman";
+            // 
+            // cariToolStripMenuItem
+            // 
+            this.cariToolStripMenuItem.Name = "cariToolStripMenuItem";
+            this.cariToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.cariToolStripMenuItem.Text = "Cari Teman";
+            this.cariToolStripMenuItem.Click += new System.EventHandler(this.cariToolStripMenuItem_Click);
+            // 
+            // permintaanPertemananToolStripMenuItem
+            // 
+            this.permintaanPertemananToolStripMenuItem.Name = "permintaanPertemananToolStripMenuItem";
+            this.permintaanPertemananToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.permintaanPertemananToolStripMenuItem.Text = "Permintaan Pertemanan";
+            this.permintaanPertemananToolStripMenuItem.Click += new System.EventHandler(this.permintaanPertemananToolStripMenuItem_Click);
+            // 
+            // daftarTemanToolStripMenuItem
+            // 
+            this.daftarTemanToolStripMenuItem.Name = "daftarTemanToolStripMenuItem";
+            this.daftarTemanToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.daftarTemanToolStripMenuItem.Text = "Daftar Teman";
+            this.daftarTemanToolStripMenuItem.Click += new System.EventHandler(this.daftarTemanToolStripMenuItem_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.Location = new System.Drawing.Point(512, 0);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(29, 24);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProfile.TabIndex = 0;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.Click += new System.EventHandler(this.pictureBoxProfile_Click);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // FormUtama
             // 
@@ -110,9 +147,9 @@
             this.Name = "FormUtama";
             this.Text = "PamerYuk";
             this.Load += new System.EventHandler(this.FormUtama_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,6 +164,10 @@
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kisahHidupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem friendToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cariToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem permintaanPertemananToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem daftarTemanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
 

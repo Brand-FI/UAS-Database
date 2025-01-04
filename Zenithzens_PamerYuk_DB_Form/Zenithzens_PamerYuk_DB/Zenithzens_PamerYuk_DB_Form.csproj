@@ -51,6 +51,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>db.settings</DependentUpon>
     </Compile>
+    <Compile Include="FormDaftarTeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDaftarTeman.Designer.cs">
+      <DependentUpon>FormDaftarTeman.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKisahHidup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,12 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPermintaanPertemanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPermintaanPertemanan.Designer.cs">
+      <DependentUpon>FormPermintaanPertemanan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormRegisterUser.cs">
       <SubType>Form</SubType>
@@ -81,6 +93,12 @@
     <Compile Include="FormTambahOrganisasi.Designer.cs">
       <DependentUpon>FormTambahOrganisasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeman.Designer.cs">
+      <DependentUpon>FormTeman.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +107,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDaftarTeman.resx">
+      <DependentUpon>FormDaftarTeman.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormKisahHidup.resx">
       <DependentUpon>FormKisahHidup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPermintaanPertemanan.resx">
+      <DependentUpon>FormPermintaanPertemanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterUser.resx">
       <DependentUpon>FormRegisterUser.cs</DependentUpon>
@@ -103,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahOrganisasi.resx">
       <DependentUpon>FormTambahOrganisasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeman.resx">
+      <DependentUpon>FormTeman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.cs</DependentUpon>
